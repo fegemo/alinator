@@ -1,0 +1,11 @@
+{
+  "urls": {
+    "homepage": "http://agendamento.decom.cefetmg.br",
+    "login": "http://agendamento.decom.cefetmg.br/index.php",
+    "schedule": "http://agendamento.decom.cefetmg.br/schedule.php"
+  },
+  "credentials": {
+    "user": "coutinho_decom",
+    "pwd": "q2raf2Tm"
+  }
+}
