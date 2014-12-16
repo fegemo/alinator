@@ -1,8 +1,11 @@
 {
   "name": "alinator",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Gera uma tabela de projetores alocados por professor do dia corrente.",
-  "main": "app.js",
+  "main": "lib/app.js",
+  "bin": {
+    "alinator": "bin/cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,17 +18,20 @@
     "crawler"
   ],
   "author": "Flavio Coutinho",
-  "license": "ISC",
+  "license": "GPL",
   "bugs": {
     "url": "https://github.com/fegemo/alinator/issues"
   },
   "homepage": "https://github.com/fegemo/alinator",
+  "preferGlobal": true,
   "dependencies": {
-    "bl": "^0.9.3",
     "cheerio": "^0.18.0",
     "colors": "^1.0.3",
+    "commander": "^2.5.0",
     "cookie": "^0.1.2",
     "moment": "^2.8.4",
+    "multimeter": "^0.1.1",
+    "open": "0.0.5",
     "querystring": "^0.2.0",
     "request": "^2.51.0",
     "underscore": "^1.7.0"

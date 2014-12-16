@@ -55,8 +55,8 @@
         to right,
         transparent,
         transparent 32%,
-        rgba(100, 149, 237, .2) 32%,
-        rgba(100, 149, 237, .2) 48%,
+        rgba(100, 149, 237, .1) 32%,
+        rgba(100, 149, 237, .1) 48%,
         transparent 48%
         );
       }
@@ -95,240 +95,28 @@
     <tr>
       <th colspan="3">Projetores para sexta-feira (12/12/14)</th>
     </tr>
-    
+    <% for(var proj in reservations) {
+         var reservation = reservations[proj]; %>
     <tr>
-      <td rowspan="3">
-        <span class="persited-field" contenteditable="true">Projetor Inform�tica
-</span>
+      <td rowspan="<%= reservation.length %>">
+        <span class="persited-field" contenteditable="true"><%= proj %></span>
       </td>
-      
-        <td>
-          <span class="persited-field" contenteditable="true">Sandro Renato Dias
-<i>Aula Redes - Grad. Eng. Comp.</i></span>
-        </td>
-        <td>07:10 - 08:50</td>
-      
+      <% for (var i in reservation) {
+           var alloc = reservation[i];
+           if (i > 0) { %>
              </tr><tr>
-           
+           <% } %>
         <td>
-          <span class="persited-field" contenteditable="true">Aline F&#xE1;tima Reis de Sousa
-<i>Joao Sarubbi</i></span>
+          <span class="persited-field" contenteditable="true"><%= alloc.person %></span>
         </td>
-        <td>10:50 - 12:30</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Vinicius Fernandes dos Santos</span>
-        </td>
-        <td>13:10 - 14:50</td>
-      
-      
+        <td><%= alloc.start + ' - ' + alloc.end %></td>
+      <%  } %>
+      <% if (reservation.length === 0) { %>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      <% } %>
     </tr>
-    
-    <tr>
-      <td rowspan="3">
-        <span class="persited-field" contenteditable="true">Projetor Multim�dia 1
-</span>
-      </td>
-      
-        <td>
-          <span class="persited-field" contenteditable="true">Anisio Mendes Lacerda
-<i>Reserva para disciplina de Laborat&#xFFFD;rio de PC1</i></span>
-        </td>
-        <td>09:00 - 12:30</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Andrei Rimsa &#xC1;lvares</span>
-        </td>
-        <td>13:10 - 14:50</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Thiago de Souza Rodrigues</span>
-        </td>
-        <td>15:00 - 16:40</td>
-      
-      
-    </tr>
-    
-    <tr>
-      <td rowspan="3">
-        <span class="persited-field" contenteditable="true">Projetor Multim�dia 2
-</span>
-      </td>
-      
-        <td>
-          <span class="persited-field" contenteditable="true">Aline F&#xE1;tima Reis de Sousa
-<i>Marcos Prado-Nova Reserva</i></span>
-        </td>
-        <td>07:10 - 10:30</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Eduardo Guilherme da Silva Souza
-<i>Prof. Rone DCSA</i></span>
-        </td>
-        <td>13:10 - 14:50</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Sandro Renato Dias
-<i>Aula AOC1 - Grad. Eng. Comp.</i></span>
-        </td>
-        <td>15:00 - 16:40</td>
-      
-      
-    </tr>
-    
-    <tr>
-      <td rowspan="6">
-        <span class="persited-field" contenteditable="true">Projetor Multim�dia 3
-</span>
-      </td>
-      
-        <td>
-          <span class="persited-field" contenteditable="true">Fl&#xE1;vio Vin&#xED;cius Cruzeiro Martins
-<i>Aulas de Intelig&#xFFFD;ncia Computacional 1</i></span>
-        </td>
-        <td>07:10 - 08:50</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Elizabeth Fialho Wanner
-<i>aula Otimiza&#xFFFD;&#xFFFD;o II</i></span>
-        </td>
-        <td>08:50 - 10:40</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Aline F&#xE1;tima Reis de Sousa
-<i>Jo&#xFFFD;o Sarubbi</i></span>
-        </td>
-        <td>10:50 - 12:30</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Aline F&#xE1;tima Reis de Sousa
-<i>Ismael</i></span>
-        </td>
-        <td>13:10 - 14:50</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Andrei Rimsa &#xC1;lvares</span>
-        </td>
-        <td>15:00 - 18:40</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Aline F&#xE1;tima Reis de Sousa
-<i>Juliana</i></span>
-        </td>
-        <td>19:10 - 20:50</td>
-      
-      
-    </tr>
-    
-    <tr>
-      <td rowspan="1">
-        <span class="persited-field" contenteditable="true">Projetor Multim�dia 4
-</span>
-      </td>
-      
-        <td>
-          <span class="persited-field" contenteditable="true">Aline F&#xE1;tima Reis de Sousa
-<i>Gilmar</i></span>
-        </td>
-        <td>13:30 - 17:40</td>
-      
-      
-    </tr>
-    
-    <tr>
-      <td rowspan="3">
-        <span class="persited-field" contenteditable="true">Projetor Multim�dia 5
-</span>
-      </td>
-      
-        <td>
-          <span class="persited-field" contenteditable="true">Aline F&#xE1;tima Reis de Sousa
-<i>Adelson</i></span>
-        </td>
-        <td>07:10 - 10:40</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Fl&#xE1;vio Roberto dos Santos Coutinho
-<i>Aula de Programa&#xFFFD;&#xFFFD;o Web de Eng.Comp.</i></span>
-        </td>
-        <td>10:50 - 12:40</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Frederico Franklin Albuquerque Leal</span>
-        </td>
-        <td>13:10 - 14:50</td>
-      
-      
-    </tr>
-    
-    <tr>
-      <td rowspan="5">
-        <span class="persited-field" contenteditable="true">Projetor Multim�dia 6
-</span>
-      </td>
-      
-        <td>
-          <span class="persited-field" contenteditable="true">Vinicius Fernandes dos Santos</span>
-        </td>
-        <td>07:10 - 08:50</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Rogerio Martins Gomes</span>
-        </td>
-        <td>08:50 - 12:30</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Cristina Duarte Murta</span>
-        </td>
-        <td>13:10 - 14:50</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Aline F&#xE1;tima Reis de Sousa
-<i>Prof. Bruno</i></span>
-        </td>
-        <td>15:00 - 16:40</td>
-      
-             </tr><tr>
-           
-        <td>
-          <span class="persited-field" contenteditable="true">Fl&#xE1;vio Roberto dos Santos Coutinho
-<i>Aula de CG de Eng.Comp.</i></span>
-        </td>
-        <td>16:40 - 18:40</td>
-      
-      
-    </tr>
-    
+    <%  } %>
   </table>
 
   <!-- Zepto -->
