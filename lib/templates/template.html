@@ -6,7 +6,7 @@
   <style type="text/css">
     body {
       font-family: "Trebuchet MS", sans-serif;
-      font-size: 1vw;
+      font-size: 15px;
     }
     table {
       border-collapse: collapse;
@@ -26,13 +26,19 @@
       background-color:#fff;
     }
     table th {
-      background-color:#f0f0f0;
+      background-color:#dbdbdb;
       font-weight: bold;
       font-size: 120%;
       text-align: center;
     }
     table tr:nth-child(odd) td {
-      background-color:#f9f9f9;
+      background-color: #eaeaea;
+    }
+    table td span {
+      margin: 0 1.5em;
+    }
+    .centered {
+      text-align: center;
     }
     .collapsed-cell {
       height: 0;
@@ -73,11 +79,25 @@
     .persisted-field {
       display: inline-block;
       padding: 4px;
-      border-radius: 2px;
     }
     .persited-field:hover {
       outline: 1px dashed gray;
     }
+  </style>
+  <style media="print">
+    .table-grip,
+	.JCLRgrip {
+	  display: none;
+	}
+	.JCLRgrip.grip-dragging {
+      background-image: none;
+    }
+	@page {
+	  margin: .5cm;
+	  table {
+	    page-break-inside: avoid;
+	  }
+	}
   </style>
 </head>
 <body>
@@ -93,7 +113,7 @@
       <td class="collapsed-cell"></td>
     </tr>
     <tr>
-      <th colspan="3">Projetores para sexta-feira (12/12/14)</th>
+      <th colspan="3">Projetores para <%= day %> (<%= date %>)</th>
     </tr>
     <% for(var proj in reservations) {
          var reservation = reservations[proj]; %>
@@ -109,7 +129,9 @@
         <td>
           <span class="persited-field" contenteditable="true"><%= alloc.person %></span>
         </td>
-        <td><%= alloc.start + ' - ' + alloc.end %></td>
+        <td class="centered">
+          <span><%= alloc.start + ' - ' + alloc.end %></span>
+        </td>
       <%  } %>
       <% if (reservation.length === 0) { %>
         <td>&nbsp;</td>
