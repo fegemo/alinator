@@ -15,6 +15,7 @@ commander
 
 if (!commander.silent) {
   logger.on('log', console.log);
+  logger.on('error', console.error);
 }
 
 var notifier = updateNotifier({
