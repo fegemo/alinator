@@ -5,8 +5,8 @@
     "schedule": "http://agendamento.decom.cefetmg.br/schedule.php"
   },
   "credentials": {
-    "user": "coutinho_decom",
-    "pwd": "q2raf2Tm"
+    "user": "professor_decom",
+    "pwd": "senha"
   },
   "projectorsSearchString": "Projetor",
   "dayStartHour": 7,
