@@ -1,6 +1,6 @@
 {
   "name": "alinator",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Gera uma tabela de projetores alocados por professor do dia corrente.",
   "main": "lib/app.js",
   "bin": {
