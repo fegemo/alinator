@@ -12,6 +12,7 @@ var commander = require('commander'),
 
 commander
   .version(pkg.version)
+  .description(pkg.description)
   .option('-s, --silent', 'Nao escreve nada no console')
   .option('-u, --username <v>', 'Define o usuario que sera usado para fazer login no sistema de agendamento (nome_decom)')
   .option('-p, --password <v>', 'Define a senha que sera usada para fazer login no sistema de agendamento')
