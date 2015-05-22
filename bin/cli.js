@@ -40,9 +40,10 @@ var notifier = updateNotifier({
 notifier.notify();
 
 if (notifier.update) {
-  console.log('Uma ' + 'nova versao'.green + '(' + notifier.update.latest + ') esta disponivel!');
+  console.log('\nUma ' + 'nova versao'.green + ' (' + notifier.update.latest + ') esta disponivel!');
   console.log('Execute o comando abaixo para instalar:');
-  console.log('\t$ npm install -g alinator '.blue);
+  console.log('  $ npm install -g alinator '.blue + '\n\n');
+  process.exit();
 }
 
 app.go(config, function(filePath) {
